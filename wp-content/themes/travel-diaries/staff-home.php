@@ -108,7 +108,7 @@ $opened_tickets = $wpdb->get_results("SELECT * FROM mju_tickets WHERE opened = '
                 <thead>
                     <tr><th colspan="11">طلبات الصيانة ( <?php echo $currentStatus; ?> )</th></tr>
                     <tr>
-                        <th style="width: 3%;"></th>
+                        <th style="width: 2%;"></th>
                         <th style="width: 15%;">الوصف</th>
                         <th  style="width: 10%;">المنشئ</th>
                         <th  style="width: 13%;">المكان</th>
