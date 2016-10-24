@@ -77,7 +77,13 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
+//define('WP_DEBUG', false);
+ini_set('log_errors','On');
+ini_set('display_errors','Off');
+ini_set('error_reporting', E_ALL );
 define('WP_DEBUG', false);
+define('WP_DEBUG_LOG', true);
+define('WP_DEBUG_DISPLAY', false);
 define( 'WP_MEMORY_LIMIT', '128M' );
 define( 'WP_AUTO_UPDATE_CORE', false );
 

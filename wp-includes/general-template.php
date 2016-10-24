@@ -880,8 +880,9 @@ function get_custom_logo( $blog_id = 0 ) {
 
 	// We have a logo. Logo is go.
 	if ( $custom_logo_id ) {
-		$html = sprintf( '<a href="" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
-			esc_url( home_url( '/' ) ),
+		$html = sprintf( 
+//                        '<a href="%1$s" class="custom-logo-link" rel="home" itemprop="url">%2$s</a>',
+//			esc_url( home_url( '/' ) ),
 			wp_get_attachment_image( $custom_logo_id, 'full', false, array(
 				'class'    => 'custom-logo',
 				'itemprop' => 'logo',
@@ -891,7 +892,7 @@ function get_custom_logo( $blog_id = 0 ) {
 
 	// If no logo is set but we're in the Customizer, leave a placeholder (needed for the live preview).
 	elseif ( is_customize_preview() ) {
-		$html = sprintf( '<a href="" class="custom-logo-link" style="display:none;"><img class="custom-logo"/></a>',
+		$html = sprintf( '<a href="%1$s" class="custom-logo-link" style="display:none;"><img class="custom-logo"/></a>',
 			esc_url( home_url( '/' ) )
 		);
 	}
@@ -2795,7 +2796,7 @@ function wp_site_icon() {
  * in the background, to perform DNS lookups or to begin the connection
  * handshake (DNS, TCP, TLS) in the background.
  *
- * These performance improving indicators work by using `<link rel"…">`.
+ * These performance improving indicators work by using `<link rel"â€¦">`.
  *
  * @since 4.6.0
  */
@@ -3149,8 +3150,8 @@ function language_attributes( $doctype = 'html' ) {
  *                                      Default 1.
  *     @type int    $mid_size           How many numbers to either side of the current pages. Default 2.
  *     @type bool   $prev_next          Whether to include the previous and next links in the list. Default true.
- *     @type bool   $prev_text          The previous page text. Default '« Previous'.
- *     @type bool   $next_text          The next page text. Default '« Previous'.
+ *     @type bool   $prev_text          The previous page text. Default 'Â« Previous'.
+ *     @type bool   $next_text          The next page text. Default 'Â« Previous'.
  *     @type string $type               Controls format of the returned value. Possible values are 'plain',
  *                                      'array' and 'list'. Default is 'plain'.
  *     @type array  $add_args           An array of query args to add. Default false.

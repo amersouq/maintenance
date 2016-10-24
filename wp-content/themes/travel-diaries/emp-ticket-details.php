@@ -40,33 +40,29 @@ $completePlaceDesc = $ticketBuilding->region_name . " - " . $ticketBuilding->bui
 ?>
 
 <div class="no-print">
-    <a href="emp-home">الرئيسية</a> | <a href="" id="print_ticket_href" >طباعة</a><?php if ($ticket_details->status == 4) { ?> | <a class="no-print" href="<?php echo 'emp-ticket-reopen?ticketID=' . $ticket_details->ticket_id; ?>">إعادة فتح</a> <?php } ?>
+    <a href="emp-home">الرئيسية</a> | <a href="" id="print_ticket_href" >طباعة</a><?php // if ($ticket_details->status == 4) { ?><!-- | <a class="no-print" href="<?php // echo 'emp-ticket-reopen?ticketID=' . $ticket_details->ticket_id; ?>">إعادة فتح</a> <?php // } ?>-->
 </div>
 
 <div class="col-xs-12 col-md-12 ">
-    <h3><?php echo $ticket_details->title; ?></h3>
-
     <div class="ticket_details">
+        <div class="">
+            <div class=""><label class="title_label"> الوصف: </label>&nbsp;&nbsp;<?php echo" " . $ticket_details->title; ?></div>
+        </div>
         <div class="">
             <div class=""><label class="title_label"> الوصف: </label>&nbsp;&nbsp;<?php echo" " . $ticket_details->description; ?></div>
         </div>	
-        <br />
         <div class="">
             <div class=""><label class="title_label"> الحالة: </label>&nbsp;&nbsp;<?php echo $status; ?></div>
         </div>
-        <br />
         <div class="">
             <div class=""><label class="title_label"> رقم أمر العمل: </label>&nbsp;&nbsp;<?php echo $ticket_details->jo_number; ?></div>
         </div>
-        <br />
         <div class="">
             <div class=""><label class="title_label"> المبنى: </label>&nbsp;&nbsp;<?php echo $completePlaceDesc; ?></div>
         </div>
-        <br />
         <div class="">
             <div class=""><label class="title_label"> المكان: </label>&nbsp;&nbsp;<?php echo $ticket_details->place; ?></div>
         </div>
-        <br />
         <div class="">
             <div class=""><label class="title_label"> الغرفة: </label>&nbsp;&nbsp;<?php echo $ticket_details->room_number; ?></div>
         </div>
@@ -86,3 +82,5 @@ $completePlaceDesc = $ticketBuilding->region_name . " - " . $ticketBuilding->bui
         </div>
     </div>
 </div>
+
+<?php get_footer(); ?>

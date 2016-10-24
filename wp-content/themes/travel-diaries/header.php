@@ -17,12 +17,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+        
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/jcf.css' ?>">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>  
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"/>  
         <script language="javascript" type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/jQuery.print.js'; ?>"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/site-main.js'; ?>"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/jQuery.print.js'; ?>"></script>
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <?php wp_head(); ?>
     </head>
@@ -34,9 +37,9 @@
 
                 <div class="header-t">
                     <div class="container">
-                        <div id="mobile-header">
-                            <!--<a id="top-menu-button" href="#top-menu"><span class="fa fa-bars"></span></a>-->
-                        </div>
+<!--                        <div id="mobile-header">
+                            <a id="top-menu-button" href="#top-menu"><span class="fa fa-bars"></span></a>
+                        </div>-->
                         <?php if (has_nav_menu('secondary')) { ?>
                             <nav class="top-menu">
                                 <?php // wp_nav_menu(array('theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'fallback_cb' => false)); ?>
@@ -55,7 +58,7 @@
                     <div class="container">
 
                         <div class="site-branding">
-
+                            <!--<img width="150" height="150" src="http://maint-ju-university.com/wp-content/uploads/2016/10/imageedit_1_8548913247.png" class="custom-logo" alt="imageedit_1_8548913247" itemprop="logo">-->
                             <?php
                             if (function_exists('has_custom_logo') && has_custom_logo()) {
                                 the_custom_logo();
@@ -76,6 +79,7 @@
                                 <?php
                             endif;
                             ?>
+                                <p>المقاول / &nbsp;<img width="30px" height="24px" src="http://maint-ju-university.com/wp-content/uploads/2016/10/SBTMC.png">&nbsp; شركة فن المعمار السعودية </p>
                             <p class="site-title no-print"><?php
                                 if ($_SESSION["staff_user_details"]) {
                                     echo "مرحبا, " . $_SESSION["staff_user_details"]->name;

@@ -56,7 +56,7 @@ $regions = $wpdb->get_results("SELECT * FROM mju_regions");
                         
                         <select id="building" name="building"></select>
                         <div id='loadingmessage' style='display:none'>
-                            <img src="<?php echo get_template_directory_uri() . '/images/loading_150.gif'; ?>"/>
+                            <img width="40px" height="40px" src="<?php echo get_template_directory_uri() . '/images/loading_150.gif'; ?>"/>
                         </div>
                         <br />
                         وصف المكان: <input id="place" type="text" placeholder="وصف المكان" name="place" required />

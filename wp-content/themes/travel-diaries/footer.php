@@ -56,7 +56,7 @@
 				<?php echo "إدارة التشغيل و الصيانة - جامعة الجوف"; ?>
 			</div><!-- .container -->
 		</div><!-- .footer-b -->
-        <?php if ($_SESSION["staff_user_details"]) echo do_shortcode('[google-translator]'); ?>
+                <div class="no-print"><?php if ($_SESSION["staff_user_details"]) echo do_shortcode('[google-translator]'); ?></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

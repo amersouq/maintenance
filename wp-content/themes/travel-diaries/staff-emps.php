@@ -51,8 +51,8 @@ $opened_tickets = $wpdb->get_results("SELECT * FROM mju_tickets WHERE opened = '
                     <tr class="<?php echo $trClass; ?> <?php // echo ($i % 2) ? 'even_row' : '';       ?>">
 
                         <td><?php echo $i; ?></td>
-                        <td style="font-size: 20px;"><a href="<?php echo 'staff-emps-tickets?segment=5&emp_username=' . $emp->created_by; ?>"><?php echo $emp->created_by_name ? $emp->created_by_name:$emp->created_by; ?></a></td>
-                        <td style="font-size: 20px;"><a href="<?php echo 'staff-emps-tickets?segment=5&emp_username=' . $emp->created_by; ?>"><?php echo count($empTickets) ? count($empTickets) : "لا يوجد" ?></a></td>
+                        <td style="font-size: 20px;"><a href="<?php echo 'staff-home?segment=5&emp_username=' . $emp->created_by; ?>"><?php echo $emp->created_by_name ? $emp->created_by_name:$emp->created_by; ?></a></td>
+                        <td style="font-size: 20px;"><a href="<?php echo 'staff-home?segment=5&emp_username=' . $emp->created_by; ?>"><?php echo count($empTickets) ? count($empTickets) : "لا يوجد" ?></a></td>
                     </tr>
 
 

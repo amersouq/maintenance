@@ -14,7 +14,9 @@ $userDetails = $_SESSION["staff_user_details"];
 <div class="container-fluid">
 
     <div class="row">
-
+        <div id='loadingmessage' style='display:none'>
+            <img width="40px" height="40px" src="<?php echo get_template_directory_uri() . '/images/loading_150.gif'; ?>"/>
+        </div>
         <div class="col-xs-12 col-md-12">
             <div class="manpower-page">
                 <div id="add_man_form">
@@ -32,6 +34,8 @@ $userDetails = $_SESSION["staff_user_details"];
                         <input name="userID" type="hidden" value="<?php echo $userDetails->id; ?>" />
                         <input name="url" id="url" type="hidden" value="<?php echo get_template_directory_uri() . '/staff-change-password-action.php'; ?>" />
                         <input name="redirect_url" id="redirect_url" type="hidden" value="<?php echo get_site_url(); ?>" />
+
+                        <br />
                         <input  type="submit" value="تعديل"/>
                     </form>
                 </div>
