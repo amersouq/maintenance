@@ -152,7 +152,7 @@ $opened_tickets = $wpdb->get_results("SELECT * FROM mju_tickets WHERE opened = '
                         <tr class="<?php echo $trClass; ?> <?php // echo ($i % 2) ? 'even_row' : '';           ?>">
 
                                                                 <!--<td><?php // echo $i;      ?></td>-->
-                            <td><?php echo ($emp_ticket->opened == 0) ? "<span class='label label-warning new_ticket_label'>جديد</span>" : ""; ?></td>
+                            <td><?php echo ($emp_ticket->opened == 0) ? "<span class='label label-warning new_ticket_label'>جديد</span>" : "<img style='opacity:0.5;' width='20' height='20' src='".get_site_url() ."/wp-content/uploads/2016/10/green-icon-mark-round-check-correct.png'>"; ?></td>
                             <td class="description_td"><a href="<?php echo 'staff-ticket-details?ticketID=' . $emp_ticket->ticket_id; ?>"><?php echo $emp_ticket->title; ?></a></td>
                             <td><a href="<?php echo 'staff-ticket-details?ticketID=' . $emp_ticket->ticket_id; ?>"><?php echo $emp_ticket->created_by_name ? $emp_ticket->created_by_name : $emp_ticket->created_by; ?></a></td>
                             <td><a href="<?php echo 'staff-ticket-details?ticketID=' . $emp_ticket->ticket_id; ?>"><?php echo $completePlaceDesc; ?></a></td>
