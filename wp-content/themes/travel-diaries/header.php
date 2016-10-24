@@ -19,8 +19,8 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         
         <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/jcf.css' ?>">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"/>  
+        <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/css/bootstrap.min.css' ?>">
+        <script src="<?php echo get_template_directory_uri() . '/js/jquery.min.js'; ?>"/>  
         <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"/>  
         <script language="javascript" type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/jQuery.print.js'; ?>"></script>
         <script language="javascript" type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/site-main.js'; ?>"></script>
@@ -79,7 +79,7 @@
                                 <?php
                             endif;
                             ?>
-                                <p>المقاول / &nbsp;<img width="30px" height="24px" src="http://maint-ju-university.com/wp-content/uploads/2016/10/SBTMC.png">&nbsp; شركة فن المعمار السعودية </p>
+                                <p>المقاول / &nbsp;<img width="30px" height="24px" src="<?php echo get_site_url() . '/wp-content/uploads/2016/10/SBTMC.png' ?>">&nbsp; شركة فن المعمار السعودية </p>
                             <p class="site-title no-print"><?php
                                 if ($_SESSION["staff_user_details"]) {
                                     echo "مرحبا, " . $_SESSION["staff_user_details"]->name;
