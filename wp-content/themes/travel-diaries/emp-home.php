@@ -60,7 +60,7 @@ $latest_tickets = $wpdb->get_results($query . " ORDER BY create_date DESC LIMIT 
 //$offset = ( $page * $items_per_page ) - $items_per_page;
 //$latest_tickets = $wpdb->get_results($query . " ORDER BY create_date DESC LIMIT ${offset}, ${items_per_page}");
 
-$emp_tickets = $wpdb->get_results("SELECT * FROM mju_tickets WHERE " . $queryStatus . " AND created_by='" . $logge_emp_username . "'");
+$emp_tickets = $wpdb->get_results("SELECT * FROM mju_tickets " . $queryStatus . " AND created_by='" . $logge_emp_username . "'");
 
 function cmp($a, $b) {
     return $b->create_date > $a->create_date;
